@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: "Roboto";
+  font-family: "Comfortaa", cursive;
+}
+:root {
+  --secondary: rgb(199, 199, 199);
+  --primary: #398967;
+  --text: #c65032;
 }
