@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Style from "./Recipe.module.css";
 
-const RecipeComponent = ({ label, image, url, ingredients }) => {
+const RecipeComponent = ({ label, image, ingredients }) => {
   const [show, setShow] = useState(false);
   const changeShow = () => {
     setShow(!show);
@@ -14,8 +14,7 @@ const RecipeComponent = ({ label, image, url, ingredients }) => {
           className={!show ? Style.image : Style.imageOnShow}
           alt="loading image...."
         />
-        <h3 className={Style.label}>{label}</h3>
-        <a href={url}></a>
+        <h3 className={!show ? Style.label : Style.labelOnShow}>{label}</h3>
         <p className={Style.showIngredients} onClick={changeShow}>
           {!show ? "Show Ingredients" : "Hide Ingredients"}
         </p>
