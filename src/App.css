@@ -33,29 +33,6 @@
   background: transparent;
   font-family: "Comfortaa", cursive;
 }
-.filter-cont {
-  position: relative;
-  height: 50px;
-  width: 35px;
-  border: 1px solid var(--primary);
-  border-left: none;
-  border-right: none;
-  /* color: var(--primary); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.filter-cont #filter {
-  position: absolute;
-  right: -1px;
-  top: 49px;
-  display: none;
-  font-size: 1.1rem;
-  font-family: monospace;
-}
-.filter-cont:hover #filter {
-  display: block;
-}
 #submit {
   font-size: 1.5rem;
   padding: 0px 10px;

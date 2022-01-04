@@ -4,7 +4,7 @@ import "./App.css";
 import Alert from "./Alert";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter, fas } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, fas } from "@fortawesome/free-solid-svg-icons";
 
 const Recipe = (props) => {
   const [search, setSearch] = useState(props.initialSearch);
@@ -57,7 +57,6 @@ const Recipe = (props) => {
       setRecipe(result.hits);
 
       console.log(result);
-      console.log(haveResults);
     } else {
       setAlert("Please fill the Input Field");
     }
@@ -89,20 +88,9 @@ const Recipe = (props) => {
               e.target.select();
             }}
           />
-          <div className="filter-cont">
-            <h2 className="filter-symbol">
-              <FontAwesomeIcon icon={(fas, faFilter)} color="#398967" />
-              <select name="mealtype" id="filter">
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-                <option value="Dinner">Dinner</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Dinner">Dinner</option>
-              </select>
-            </h2>
-          </div>
+
           <button id="submit" onClick={submit}>
-            Search
+            <FontAwesomeIcon icon={faSearch} />
           </button>
         </div>
         {alert !== "" && <Alert alert={alert} />}
